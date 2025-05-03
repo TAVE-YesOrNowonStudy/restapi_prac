@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import restapi.prac.moodel.Post;
+import restapi.prac.model.Post;
 import restapi.prac.repository.PostRepository;
 
 import java.util.Optional;
@@ -21,7 +21,7 @@ public class PostService {
         return postRepository.findById(id);
     }
     public Post createPost(Post post) {
-        return postRepository.save(post);
+         return postRepository.save(post);
     }
     public Optional<Post> updatePost(Long id, Post updatePost) {
         return postRepository.findById(id).map(post->{
